@@ -1,0 +1,17 @@
+{ 
+  "name": "calculator-app",
+  "version": "1.0.0",
+  "description": "Calculator desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "calculator"
+  ],
+  "author": "Lourenz Baliber",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^15.3.1"
+  }
+}

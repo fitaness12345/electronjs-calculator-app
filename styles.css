@@ -1,0 +1,89 @@
+@font-face {
+  font-family: Quicksand;
+  src: url("https://fonts.google.com/specimen/Quicksand");
+}
+
+*,
+*::before,
+*::after {
+  font-family: Quicksand-bold, sans-serif;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to left, #ffafbd, #ffc3a0);
+}
+
+.calculator-grid {
+  justify-content: center;
+  display: grid;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  border: 1px solid #ffff;
+  font-size: 2rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.two-span {
+  grid-column: span 2;
+}
+
+.result {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.result .previous-result {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.result .current-result {
+  color: #ffff;
+  font-size: 2.5rem;
+}
+
+#title-bar {
+  -webkit-app-region: drag;
+  height: 24px;
+  background-color: linear-gradient(to left, #ffafbd, #ffc3a0);
+  padding: none;
+  margin: 0px;
+}
+
+#title {
+  position: fixed;
+  top: 6px;
+  left: 6px;
+  color: rgb(0, 0, 0);
+  font-size: large;
+  font-family: Quicksand-bold, sans-serif;
+}
+
+#title-bar-btns {
+  -webkit-app-region: no-drag;
+  position: fixed;
+  top: 6px;
+  right: 6px;
+}
